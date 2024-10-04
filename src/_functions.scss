@@ -1,6 +1,0 @@
-
-// Create column width based on number of columns
-// Dependencies: $col-width, $col-gutter
-@function col-width($cols: 1) {
-  @return $cols * $col-width + ($cols - 1) * $col-gutter;
-}
