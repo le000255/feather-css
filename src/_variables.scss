@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Color variables
+$fe-clr-primary: hsl(228, 58%, 35%);
+$fe-clr-secondary: hsl(208, 7%, 46%);
+$fe-clr-success: hsl(134, 61%, 41%);
+$fe-clr-info: hsl(188, 78%, 41%);
+$fe-clr-warning: hsl(45, 100%, 50%);
+$fe-clr-danger: hsl(0, 72%, 53%);
+$fe-clr-light: hsl(210, 17%, 98%);
+$fe-clr-dark: hsl(210, 10%, 20%);
+
+// Text color variables
+$fe-clr-text-primary: hsl(0, 0%, 20%);
+$fe-clr-text-secondary: hsl(210, 9%, 45%);
+$fe-clr-text-success: hsl(134, 61%, 41%);
+$fe-clr-text-info: hsl(188, 78%, 41%);
+$fe-clr-text-warning: hsl(45, 100%, 50%);
+$fe-clr-text-danger: hsl(0, 72%, 53%);
+$fe-clr-text-light: hsl(210, 17%, 98%);
+$fe-clr-text-dark: hsl(210, 10%, 20%);
+
+// Typography variables
+$fe-font-family-default: 'Poppins', sans-serif;
+$fe-font-size-default: 1rem;
+$fe-font-weight-default: 400;
+$fe-font-color-default: $fe-clr-text-primary;
+$fe-line-height-default: 1.4;
+// $fe-letter-spacing-default: 0.5px;
+
+
+
+// Spacing variables
+$fe-spacing-xs: 0.25rem;
+$fe-spacing-sm: 0.5rem;
+$fe-spacing-md: 1rem;
+$fe-spacing-lg: 1.5rem;
+$fe-spacing-xl: 3rem;
+$fe-spacing-xxl: 4.5rem;
+
+// screen size variables
+$fe-screen-xs: 576px;
+$fe-screen-sm: 768px;
+$fe-screen-md: 992px;
+$fe-screen-lg: 1200px;
+$fe-screen-xl: 1400px;
+$fe-screen-xxl: 1600px;
+$fe-screen-4k: 2560px;
+
