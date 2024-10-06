@@ -1,0 +1,68 @@
+@use 'sass:color';
+
+//Cretae a map of colors
+$colors: (
+  "primary": $fe-clr-primary,
+  "secondary": $fe-clr-secondary,  //accordign to the draft it should be purple but that color code is not in the globalvariables.
+  "success": $fe-clr-success,
+  "info": $fe-clr-info,
+  "warning": $fe-clr-warning,
+  "danger": $fe-clr-danger,
+  "default": $fe-clr-dark,
+);
+
+//Create a mixin for buttons
+@mixin btn() {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: $fe-clr-text-light;
+  border-radius: $fe-spacing-xs; 
+  padding: $fe-spacing-xs * 2 $fe-spacing-xs * 5;
+}
+
+//Create a mixin for disabled buttons
+@mixin fe-disabled-btn($bg-color, $hover-bg-color) {
+  @include btn;
+  background-color: $bg-color;
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: $fe-clr-text-dark;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+}
+
+//Create buttons for each color
+@each $key, $val in $colors {
+  .fe-btn-light-#{$key} {
+    @include btn;
+    background-color: $val;
+
+    &:hover {
+      background-color: color.adjust($val, $lightness: 15%);
+    }
+  }
+
+  .fe-btn-dark-#{$key} {
+    @include btn;
+    background-color: color.adjust($val, $lightness: 20%, $hue: -18deg, $saturation: 10%);
+    color: $fe-clr-text-dark;
+
+    &:hover {
+      background-color: color.adjust($val, $lightness: -10%, $hue: -18deg, $saturation: -10%);
+      color: $fe-clr-text-light;
+    }
+  }
+}
+
+//Disabled buttons
+.fe-btn-light-disabled {
+  @include fe-disabled-btn(color.adjust($fe-clr-light, $lightness: -50%, $hue: -21deg), $fe-clr-light);
+}
+
+.fe-btn-dark-disabled {
+  @include fe-disabled-btn(color.adjust($fe-clr-light, $lightness: -20%, $hue: -10deg, $saturation: -20%), color.adjust($fe-clr-light, $lightness: -20%, $hue: -10deg, $saturation: -20%));
+}

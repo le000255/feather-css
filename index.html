@@ -26,7 +26,32 @@
             <td>Row 2, Cell 3</td>
         </tr>
     </table>
-    <div style="height: 100px; width: 100px;">
+    <div style="height: 100px; width: 100px;"><div style="height: 100px; width: 100px;"></div>
+
+    <!-- Buttons --> 
+    <h3>Light Mode</h3>
+    <div class="fe-button-container" data-mode="light"></div>
+
+    <h3>Dark Mode</h3>
+    <div class="fe-button-container" data-mode="dark"></div>
+  
+    <script>
+    const modes = ['light', 'dark'];
+    const types = ['default', 'primary', 'secondary', 'success', 'danger', 'disabled'];
+
+    modes.forEach(mode => {
+      const container = document.querySelector(`.fe-button-container[data-mode="${mode}"]`);
+      types.forEach(type => {
+        const button = document.createElement('button');
+        button.className = `fe-btn-${mode}-${type}`;
+        button.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+        if (type === 'disabled') {
+          button.disabled = true;
+        }
+        container.appendChild(button);
+      });
+    });
+  </script>
 
     </div>
 </body>

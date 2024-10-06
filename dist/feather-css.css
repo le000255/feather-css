@@ -1,1 +1,358 @@
-@import"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap";*,*::before,*::after{box-sizing:border-box}ul[role=list],ol[role=list]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.4}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion: reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}body{font-family:"Poppins",sans-serif;color:hsl(210,10%,20%)}h1,h2,h3,h4,h5,h6{font-weight:600}h1{font-size:2.5rem}h2{font-size:2rem}h3{font-size:1.75rem}h4{font-size:1.5rem}h5{font-size:1.25rem}h6{font-size:1rem}p{font-size:1rem;line-height:1.5}small{font-size:.875rem}span{font-size:1rem}blockquote{font-size:1.25rem;font-style:italic}/*# sourceMappingURL=feather-css.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* _reset.scss */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.4;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.fe-btn-light-primary {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(228, 58%, 35%);
+}
+.fe-btn-light-primary:hover {
+  background-color: hsl(228, 58%, 50%);
+}
+
+.fe-btn-dark-primary {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(210, 68%, 55%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-primary:hover {
+  background-color: hsl(210, 48%, 25%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-secondary {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(208, 7%, 46%);
+}
+.fe-btn-light-secondary:hover {
+  background-color: hsl(208, 7%, 61%);
+}
+
+.fe-btn-dark-secondary {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(190, 17%, 66%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-secondary:hover {
+  background-color: hsl(190, 0%, 36%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-success {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(134, 61%, 41%);
+}
+.fe-btn-light-success:hover {
+  background-color: hsl(134, 61%, 56%);
+}
+
+.fe-btn-dark-success {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(116, 71%, 61%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-success:hover {
+  background-color: hsl(116, 51%, 31%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-info {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(188, 78%, 41%);
+}
+.fe-btn-light-info:hover {
+  background-color: hsl(188, 78%, 56%);
+}
+
+.fe-btn-dark-info {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(170, 88%, 61%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-info:hover {
+  background-color: hsl(170, 68%, 31%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-warning {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(45, 100%, 50%);
+}
+.fe-btn-light-warning:hover {
+  background-color: hsl(45, 100%, 65%);
+}
+
+.fe-btn-dark-warning {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(27, 110%, 70%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-warning:hover {
+  background-color: hsl(27, 90%, 40%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-danger {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(0, 72%, 53%);
+}
+.fe-btn-light-danger:hover {
+  background-color: hsl(0, 72%, 68%);
+}
+
+.fe-btn-dark-danger {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(342, 82%, 73%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-danger:hover {
+  background-color: hsl(342, 62%, 43%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-default {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(210, 10%, 20%);
+}
+.fe-btn-light-default:hover {
+  background-color: hsl(210, 10%, 35%);
+}
+
+.fe-btn-dark-default {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(192, 20%, 40%);
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-default:hover {
+  background-color: hsl(192, 0%, 10%);
+  color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-light-disabled {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(189, 17%, 48%);
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-light-disabled:hover {
+  background-color: hsl(210, 17%, 98%);
+}
+
+.fe-btn-dark-disabled {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: hsl(210, 17%, 98%);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  background-color: hsl(200, 0%, 78%);
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: hsl(210, 10%, 20%);
+}
+.fe-btn-dark-disabled:hover {
+  background-color: hsl(200, 0%, 78%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: hsl(210, 10%, 20%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+span {
+  font-size: 1rem;
+}
+
+blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=feather-css.css.map */
