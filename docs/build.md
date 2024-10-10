@@ -5,14 +5,16 @@
 ### Steps to help you establish your workflow
 Depending on your working style, check the following links.
 
-**Using Terminal(Bash) and VScode terminal** 
+>[!IMPORTANT]
+>The team will create pull requests to have their code reviewed; please read the **Pull requests** section carefully (via the following links)
 
-🔗[How to use Git with Terminal on VScode](workflow-terminal.md)
+1. **Using Terminal(Bash) and VScode terminal** 
 
-**Using GitHub website and VScode Source Control** 
+- 🔗[How to use Git with Terminal on VScode](workflow-terminal.md)
 
-🔗[How to use Git with GitHub website and VSCode Source Control](workflow-ui.md)
+2. **Using GitHub website and VScode Source Control** 
 
+- 🔗[How to use Git with GitHub website and VSCode Source Control](workflow-ui.md)
 
 ## Naming conventions
 
