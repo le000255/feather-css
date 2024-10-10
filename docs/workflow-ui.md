@@ -1,56 +1,85 @@
 # Using GitHub Website and VSCode Source Control
-## 1. Pull the Latest Changes
 
-Open **VSCode** and navigate to your project folder.
-Click on the **three dots** (More Actions) and select **Pull** to fetch and integrate changes from the remote repository.
+## Initial Setup
+Create a `dev-branch` if we don't have one. 
+>[!NOTE] 
+> Team Lead will do this. Relax 🍵.
 
-## 2. Create a New Branch
+Branch you should be on: main and dev-branch
 
-In the **Source Control** panel, click on the branch name (usually **main**).
-Select **Create new branch** and enter a name for your new branch.
+**In GitHub Web UI:**
+1. Navigate to your repository.
 
-## 3. Make Changes
+2. Click on the **Code** button and copy the repository URL.
 
-Make your changes to the codebase in **VSCode**.
-Save your changes.
+3. Open **VSCode**.
 
-## 4. Commit Your Changes
+4. Go to View -> **Command Palette** and type Git: Clone.
 
-In the **Source Control** panel, you will see the changes you made.
-Enter a descriptive commit message in the message box.
-Click on the **checkmark icon** to commit your changes.
+5. Paste the URL and choose a local directory.
 
-## 5. Push Your Branch
+**In VSCode UI:**
+1. In VSCode, click on the Source Control icon on the sidebar.
 
-Click on the **three dots** (More Actions) in the **Source Control** panel.
-Select **Push** to push your branch to the remote repository.
+2. Click on the **ellipsis (…)** and select **Pull** from the menu.
 
-## 6. Create a Pull Request
+3. Do this for both `main` and `dev-branch`.
 
-Go to the repository on the **GitHub** website.
-You will see a notification to **compare & pull request** for your recently pushed branch. Click on it.
-Add a clear description of the changes and request reviews from your team members.
-Click on **Create pull request**.
+4. Open the ****Command Palette**** (Ctrl+Shift+P).
 
-## 7. Review and Merge
+5. Type **Git: Create Branch**.
 
-Team members review the pull request, provide feedback, and approve the changes.
-Once approved, click on **Merge pull request** on the **GitHub** website.
+6 Enter the new branch name (e.g., feature-branch) and **base it** on the `dev-branch`.
 
-## 8. Update Your Local Repository
+## Regular Updates
 
-In **VSCode**, switch back to the **main** branch by clicking on the branch name and selecting **main**.
-Click on the **three dots** (More Actions) in the **Source Control** panel and select **Pull** to update your local repository with the latest changes.
+Branch you should be on: `feature-branch`
 
-## 9. Delete the Branch
+If you don't have a `feature-branch`, create one from `dev-branch`:
 
-After merging, you can delete the branch on **GitHub** by going to the **Branches** section and clicking on the **delete icon** next to the branch name.
-In **VSCode**, switch to the **main** branch and then delete the branch locally by clicking on the branch name, selecting **Delete Branch**, and confirming the deletion.
+**In VSCode:**
+
+1. Open the **Command Palette** (Ctrl+Shift+P).
+
+2. Type **Git: Create Branch**.
+
+3. Enter the branch name (e.g., feature-branch) and **base it** on the `dev-branch`.
+
+If you already have a `feature-branch`, make sure it is up to date with `dev-branch`:
+
+**In VSCode:**
+
+1. Open the **Command Palette** (Ctrl+Shift+P).
+
+2. Type Git: Pull and select dev-branch.
+
+Type Git: Merge Branch and select dev-branch.
+
+Resolve any conflicts using VSCode’s built-in conflict resolution tool.
+
+## Final Merge (Team Lead Only)
+
+Branch you should be on: `main` 
+
+Assuming that `dev-branch` has been ***carefully tested*** and the latest version has been pushed online. The *Team Lead* is responsible for merging the `dev-branch `into main:
+
+**In VSCode:**
+
+1. Open the **Command Palette** (Ctrl+Shift+P).
+
+2. Switch to the `main` branch by typing Git: Checkout to and selecting `main`.
+
+3. **Pull** the latest changes from `dev-branch`.
+
+4. **Merge** `dev-branch `into `main` and resolve conflicts if any.
+
+5. **Push** the changes back to GitHub.
 
 ## Additional Resources
 
-- Go back to 🔗[Build](build.md)
-- Go back to 🔗[Readme](../README.md)
+- Go back to 🔗[Build](build.md).
+- Go back to 🔗[README.md](/README.md)
+
 
 
 
