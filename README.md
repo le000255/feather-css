@@ -10,6 +10,7 @@ This is also a coursework project which will be submitted for grading in Level 4
 
 ### Resources
 **For collaborators**
+
 🔗[Build documentation](docs/build.md)
 
 **For users**
@@ -17,4 +18,4 @@ This is also a coursework project which will be submitted for grading in Level 4
 *To be updated*
 
 🔗User guide 
-# feather-css
+

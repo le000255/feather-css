@@ -22,7 +22,7 @@ Depending on your working style, check the following links.
 
 ### Variables and classes
 
-Use the prefix `fe-` to define a variable or a class. `fe-` refers is the initials of the framework, as in "Feather".
+Use the prefix `fe-` to define a variable or a class. `fe-` refers to the initials of the framework, as in "Feather".
 #### Examples
 
 ```scss
@@ -44,5 +44,4 @@ $fe-margin-small: 5px;
     background-color: #f8f9fa;
 }
 ```
-
-### Naming classes
+*End of document. Go back to **[README.md](/README.md)***
