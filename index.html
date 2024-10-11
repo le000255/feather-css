@@ -33,30 +33,29 @@
 
     <div style="height: 100px; width: 100px;"><div style="height: 100px; width: 100px;"></div>
 
-    <!-- Buttons --> 
-    <h3>Light Mode</h3>
-    <div class="fe-button-container" data-mode="light"></div>
-
-    <h3>Dark Mode</h3>
-    <div class="fe-button-container" data-mode="dark"></div>
-  
-    <script>
-    const modes = ['light', 'dark'];
-    const types = ['default', 'primary', 'secondary', 'success', 'danger', 'disabled'];
-
-    modes.forEach(mode => {
-      const container = document.querySelector(`.fe-button-container[data-mode="${mode}"]`);
-      types.forEach(type => {
-        const button = document.createElement('button');
-        button.className = `fe-btn-${mode}-${type}`;
-        button.textContent = type.charAt(0).toUpperCase() + type.slice(1);
-        if (type === 'disabled') {
-          button.disabled = true;
-        }
-        container.appendChild(button);
-      });
-    });
-  </script>
+    <!-- Buttons Section--> 
+    <div>
+      <h3>Light Mode</h3>
+      <div class="fe-button-container" data-mode="light">
+        <button class="fe-btn-light-default">Default</button>
+        <button class="fe-btn-light-primary">Primary</button>
+        <button class="fe-btn-light-secondary">Secondary</button>
+        <button class="fe-btn-light-success">Success</button>
+        <button class="fe-btn-light-danger">Danger</button>
+        <button class="fe-btn-light-disabled" disabled="">Disabled</button>
+      </div>
+      
+      <h3>Dark Mode</h3>
+      <div class="fe-button-container" data-mode="dark">
+        <button class="fe-btn-dark-default">Default</button>
+        <button class="fe-btn-dark-primary">Primary</button>
+        <button class="fe-btn-dark-secondary">Secondary</button>
+        <button class="fe-btn-dark-success">Success</button>
+        <button class="fe-btn-dark-danger">Danger</button>
+        <button class="fe-btn-dark-disabled" disabled="">Disabled</button>
+      </div>
+    </div>
+  <!-- Buttons Section end --> 
 
 </body>
 

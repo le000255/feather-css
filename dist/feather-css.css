@@ -283,9 +283,6 @@ select {
   opacity: 0.6;
   color: hsl(210, 10%, 20%);
 }
-.fe-btn-light-disabled:hover {
-  background-color: hsl(210, 17%, 98%);
-}
 
 .fe-btn-dark-disabled {
   display: inline-block;
@@ -300,8 +297,18 @@ select {
   opacity: 0.6;
   color: hsl(210, 10%, 20%);
 }
-.fe-btn-dark-disabled:hover {
-  background-color: hsl(200, 0%, 78%);
+
+ul, ol {
+  margin: 0 0 1rem 0;
+  padding-left: 2rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
 }
 
 body {
