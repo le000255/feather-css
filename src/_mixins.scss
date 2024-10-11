@@ -1,0 +1,18 @@
+//Mixin for table styles
+@mixin table-styles {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+
+  th, td {
+    border: 1px solid $fe-clr-dark;
+    padding: $fe-spacing-xs * 2 $fe-spacing-xs * 5;
+    text-align: center;
+  }
+
+  th {
+    background-color: $fe-clr-dark ; 
+    color:$fe-clr-light;
+    text-align: left;
+  }
+}
