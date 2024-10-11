@@ -1,0 +1,19 @@
+//Create a mixin for buttons
+@mixin btn() {
+  display:inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  color: $fe-clr-text-light;
+  border-radius: $fe-spacing-xs; 
+  padding: $fe-spacing-xs * 2 $fe-spacing-xs * 5;
+}
+
+//Create a mixin for disabled buttons
+@mixin fe-disabled-btn($bg-color, $hover-bg-color) {
+  @include btn;
+  background-color: $bg-color;
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: $fe-clr-text-dark;
+}
