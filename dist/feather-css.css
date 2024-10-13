@@ -311,6 +311,41 @@ ol {
   list-style-type: decimal;
 }
 
+.fe-simple-table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+}
+.fe-simple-table th, .fe-simple-table td {
+  border: 1px solid hsl(210, 10%, 20%);
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+}
+.fe-simple-table th {
+  background-color: hsl(210, 10%, 20%);
+  color: hsl(210, 17%, 98%);
+  text-align: left;
+}
+
+.fe-zebra-table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+}
+.fe-zebra-table th, .fe-zebra-table td {
+  border: 1px solid hsl(210, 10%, 20%);
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+}
+.fe-zebra-table th {
+  background-color: hsl(210, 10%, 20%);
+  color: hsl(210, 17%, 98%);
+  text-align: left;
+}
+.fe-zebra-table tr:nth-child(even) {
+  background-color: hsl(208, 7%, 76%);
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: hsl(210, 10%, 20%);

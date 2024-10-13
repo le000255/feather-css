@@ -1,1 +1,15 @@
+@use 'sass:color';
 
+//Simple table
+.fe-simple-table {
+  @include table-styles;
+}
+
+//Striped table
+.fe-zebra-table {
+  @include table-styles;
+
+  tr:nth-child(even) {
+    background-color: color.adjust($fe-clr-secondary, $lightness: 30%);
+  }
+}
