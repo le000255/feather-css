@@ -3,7 +3,7 @@
 //Cretae a map of colors
 $colors: (
   "primary": $fe-clr-primary,
-  "secondary": $fe-clr-secondary,  //accordign to the draft it should be purple but that color code is not in the globalvariables.
+  "secondary": $fe-clr-secondary,  
   "success": $fe-clr-success,
   "info": $fe-clr-info,
   "warning": $fe-clr-warning,
@@ -11,25 +11,6 @@ $colors: (
   "default": $fe-clr-dark,
 );
 
-//Create a mixin for buttons
-@mixin btn() {
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  color: $fe-clr-text-light;
-  border-radius: $fe-spacing-xs; 
-  padding: $fe-spacing-xs * 2 $fe-spacing-xs * 5;
-}
-
-//Create a mixin for disabled buttons
-@mixin fe-disabled-btn($bg-color, $hover-bg-color) {
-  @include btn;
-  background-color: $bg-color;
-  cursor: not-allowed;
-  opacity: 0.6;
-  color: $fe-clr-text-dark;
-}
 
 //Create buttons for each color
 @each $key, $val in $colors {
