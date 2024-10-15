@@ -1,11 +1,11 @@
 //Create a mixin for buttons
 @mixin btn() {
-  display:inline-block;
+  display: inline-block;
   text-decoration: none;
   cursor: pointer;
   border: 0;
   color: $fe-clr-text-light;
-  border-radius: $fe-spacing-xs; 
+  border-radius: $fe-spacing-xs;
   padding: $fe-spacing-xs * 2 $fe-spacing-xs * 5;
 }
 
@@ -16,21 +16,103 @@
   cursor: not-allowed;
   opacity: 0.6;
   color: $fe-clr-text-dark;
-}//Mixin for table styles
+}
+
+//Mixin for table styles
 @mixin table-styles {
   width: 100%;
   border-collapse: collapse;
   display: block;
 
-  th, td {
+  th,
+  td {
     border: 1px solid $fe-clr-dark;
     padding: $fe-spacing-xs * 2 $fe-spacing-xs * 5;
     text-align: center;
   }
 
   th {
-    background-color: $fe-clr-dark ; 
-    color:$fe-clr-light;
+    background-color: $fe-clr-dark;
+    color: $fe-clr-light;
     text-align: left;
+  }
+}
+
+// Mixin for container sizes
+@mixin container-sizes() {
+  $sizes: (
+    'xs': $fe-screen-xs,
+    'sm': $fe-screen-sm,
+    'md': $fe-screen-md,
+    'lg': $fe-screen-lg,
+    'xl': $fe-screen-xl,
+    'xxl': $fe-screen-xxl,
+    'res-4k': $fe-screen-4k,
+  );
+
+  @each $key, $val in $sizes {
+    &.#{$key} {
+      max-width: $val;
+    }
+  }
+}
+
+
+// simple column without breakpoints
+@mixin grid-cols-simple() {
+  .fe-col-full {
+    grid-column: 1/-1;
+  }
+  .fe-col-half {
+    grid-column: span 6;
+  }
+  @for $i from 1 through 12 {
+    .fe-col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+
+// Mixin for grid columns with breakpoints
+@mixin grid-cols-breakpoints() {
+  $breakpoints: (
+    'xs': $fe-screen-xs,
+    'sm': $fe-screen-sm,
+    'md': $fe-screen-md,
+    'lg': $fe-screen-lg,
+    'xl': $fe-screen-xl,
+    'xxl': $fe-screen-xxl,
+    'res-4k': $fe-screen-4k,
+  );
+
+  @each $key, $val in $breakpoints {
+    @for $i from 1 through 12 {
+      .fe-col-#{$key}-#{$i} {
+        @if $key == 'xs' {
+          grid-column: span $i;
+        } @else {
+          @media (min-width: $val) {
+            grid-column: span $i;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mixin for grid-gap
+@mixin grid-gap() {
+  $spacing-sizes: (
+    'xs': $fe-spacing-xs,
+    'sm': $fe-spacing-sm,
+    'md': $fe-spacing-md,
+    'lg': $fe-spacing-lg,
+  );
+
+  @each $key, $val in $spacing-sizes {
+    .fe-row.gap-#{$key} {
+      gap: $val;
+    }
   }
 }

@@ -2,75 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/feather-css.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- code snippet styling -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/a11y-dark.min.css">
+
+  <link rel="stylesheet" href="dist/feather-css.css">
+
+  <style>
+    /* Local styles */
+    code {
+      color: hsl(0, 72%, 53%);
+      ;
+      font-size: 1.15rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .example-box {
+      padding: 1rem;
+      background-color: lightblue;
+      margin-bottom: 1rem;
+      border: 1px solid blue;
+    }
+  </style>
+
+  <title>Document</title>
 </head>
 
 <body>
   <h1>Demo</h1>
 
   <!-- Table Section-->
-  <h2>Table</h2>
-  <div class="fe-table-container">
-    <h3>Simple Table</h3>
-    <table class="fe-simple-table">
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- <section class="fe-container" id="tables">
 
-    <h3>Zebra-striped Table</h3>
-    <table class="fe-zebra-table">
-      <thead>
-        <tr>
-          <th>Header 1</th>
-          <th>Header 2</th>
-          <th>Header 3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-        </tr>
-        <tr>
-          <td>Data 4</td>
-          <td>Data 5</td>
-          <td>Data 6</td>
-        </tr>
-        <tr>
-          <td>Data 7</td>
-          <td>Data 8</td>
-          <td>Data 9</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>  
+    <h2>Table</h2>
+    <div class="fe-table-container">
+      <h3>Simple Table</h3>
+      <table class="fe-simple-table">
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Zebra-striped Table</h3>
+      <table class="fe-zebra-table">
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+          </tr>
+          <tr>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section> -->
   <!-- Table Section end -->
 
+  <!-- Buttons Section-->
+  <section id="buttons" class="fe-container">
 
-    <div style="height: 100px; width: 100px;"><div style="height: 100px; width: 100px;"></div>
-
-    <!-- Buttons Section--> 
     <div>
       <h3>Light Mode</h3>
       <div class="fe-button-container" data-mode="light">
@@ -81,7 +106,7 @@
         <button class="fe-btn-light-danger">Danger</button>
         <button class="fe-btn-light-disabled" disabled="">Disabled</button>
       </div>
-      
+
       <h3>Dark Mode</h3>
       <div class="fe-button-container" data-mode="dark">
         <button class="fe-btn-dark-default">Default</button>
@@ -92,8 +117,111 @@
         <button class="fe-btn-dark-disabled" disabled="">Disabled</button>
       </div>
     </div>
-  <!-- Buttons Section end --> 
- 
+  </section>
+  <!-- Buttons Section end -->
+
+  <!-- Layout -->
+  <section id="layout" class="my-md">
+    <div class="fe-container py-md" style="background-color: #ddd;">
+      <h2>Layout</h2>
+      <h3>Container</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis aliquam ducimus asperiores voluptatem
+        provident recusandae sed harum dolor sequi exercitationem.</p>
+    </div>
+    <div>
+      <!-- SECTION Margin & padding notation -->
+      <div class="fe-container py-md">
+        <h2>Notation</h2>
+        <p>Spacing utilities that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them.
+          This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query.
+        </p>
+        <p>The classes are named using the format <code>{property}{sides}-{size}</code>.</p>
+        <p>In FeatherCS, default values of margin and padding are not removed to ensure sufficient (or fallback) white
+          spaces between
+          elements. However, in some cases, they can be removed to achieve custom styling purposes. To remove
+          margin/padding,
+          apply the classes with this format:<code>{property}-remove</code> or <code>{property}-remove-{sides}</code>.
+        </p>
+
+        <h3>Where property is one of:</h3>
+        <ul>
+          <li><code>m</code> - for classes that set <code>margin</code></li>
+          <li><code>p</code> - for classes that set <code>padding</code></li>
+        </ul>
+
+        <h3>Where sides is one of:</h3>
+        <ul>
+          <li><code>b</code> - for classes that set <code>margin-bottom</code> or <code>padding-bottom</code></li>
+
+          <li><code>s</code> - (start) for classes that set <code>margin-left</code> or <code>padding-left</code> in
+            LTR, <code>margin-right</code> or
+
+            <code>padding-right</code> in RTL
+          </li>
+
+          <li><code>e</code> - (end) for classes that set <code>margin-right</code> or <code>padding-right</code> in
+            LTR, <code>margin-left</code> or
+
+            <code>padding-left</code> in RTL
+          </li>
+
+          <li><code>x</code> - for classes that set both <code>*-left</code> and <code>*-right</code></li>
+
+          <li><code>y</code> - for classes that set both <code>*-top</code> and <code>*-bottom</code></li>
+
+          <li><code>blank</code> - for classes that set a <code>margin</code> or <code>padding</code> on all 4 sides
+            of the element</li>
+        </ul>
+
+        <h3>Where size is one of:</h3>
+        <ul>
+          <li><code>xs</code> - for classes that set the margin or padding to <code>$fe-spacing-xs</code></li>
+          <li><code>sm</code> - for classes that set the margin or padding to <code>$fe-spacing-sm</code></li>
+          <li><code>md</code> - for classes that set the margin or padding to <code>$fe-spacing-md</code></li>
+          <li><code>lg</code> - for classes that set the margin or padding to <code>$fe-spacing-lg</code></li>
+          <li><code>xl</code> - for classes that set the margin or padding to <code>$fe-spacing-xl</code></li>
+          <li><code>xxl</code> - for classes that set the margin or padding to <code>$fe-spacing-xxl</code></li>
+        </ul>
+        <!-- Codepen example -->
+        <h3>Examples</h3>
+        <div class="fe-container xs mx-remove">
+          <!-- Snippet example -->
+          <pre style="tab-size: 2; margin: 0; white-space: pre;
+            overflow-x: auto;">
+              <code class="language-css">/* To be added later */</code>
+            </pre>
+        </div>
+        <!-- Example end -->
+
+      </div>
+      <!-- Notation end -->
+  </section>
+
+  <section id="layout" class="fe-container py-md ">
+    <h2>Grid layout</h2>
+    <div class="fe-row fe-container gap-sm">
+      <div class="fe-col-full example-box">
+        Column 1
+      </div>
+      <div class="fe-col fe-col-xs-9 fe-col-sm-4 fe-col-md-6 fe-col-lg-8 example-box">
+        Column 2
+      </div>
+      <div class="fe-col fe-col-xs-3 fe-col-sm-8 fe-col-md-6 fe-col-lg-4 example-box">
+        Column 3
+      </div>
+      <div class="fe-col fe-col-xs-12 fe-col-sm-8 fe-col-md-6 fe-col-lg-3 example-box">
+        Column 4 
+      </div>
+      
+    </div>
+
+  </section>
+  <!-- Layout end -->
+
 </body>
+
+<!-- code snippet js -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 
 </html>

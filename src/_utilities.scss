@@ -1,0 +1,235 @@
+// utility classes
+
+//TODO
+// 1. Use example outputs for documentation (index.html)
+//    and delete them after documentation is done
+// 2. Add more utility classes for
+//    - text alignment
+//    - text transformation
+
+/* -------------------------------------------- */
+/*             Margins and paddings             */
+/* -------------------------------------------- */
+// sizes & directions
+// sizes
+$sizes: (
+  'xs': $fe-spacing-xs,
+  'sm': $fe-spacing-sm,
+  'md': $fe-spacing-md,
+  'lg': $fe-spacing-lg,
+  'xl': $fe-spacing-xl,
+  'xxl': $fe-spacing-xxl,
+);
+
+// directions
+$directions: (
+  't': top,
+  'b': bottom,
+  's': left,
+  'e': right,
+  'x': x,
+  'y': y,
+);
+
+// generate utility classes
+// margins
+
+@each $size, $val in $sizes {
+  // Generate class for no direction (applies to all sides)
+  .m-#{$size} {
+    margin: $val;
+  }
+  // Generate classes for directions
+  @each $direction, $dir in $directions {
+    // Check if direction is horizontal or vertical
+    @if $dir == x {
+      .m#{$direction}-#{$size} {
+        margin-left: $val;
+        margin-right: $val;
+      }
+    } @else if $dir == y {
+      .m#{$direction}-#{$size} {
+        margin-top: $val;
+        margin-bottom: $val;
+      }
+    } @else {
+      // Generate classes for single direction
+      .m#{$direction}-#{$size} {
+        margin-#{$dir}: $val;
+      }
+    }
+  }
+}
+
+
+// remove margins
+.m-remove {
+  margin: 0;
+}
+
+// Generate .m-remove-[direction] classes
+@each $direction, $dir in $directions {
+  @if $dir == x {
+    .m-remove-#{$direction} {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  } @else if $dir == y {
+    .m-remove-#{$direction} {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  } @else {
+    .m-remove-#{$direction} {
+      margin-#{$dir}: 0;
+    }
+  }
+}
+
+/* -------------- example outputs ------------- */
+/* 
+no direction, just size
+
+.m-xs {
+  margin: 0.25rem;
+ }
+.m-sm {
+  margin: 0.5rem;
+ }
+*/
+
+//direction and size
+
+/*
+single direction
+
+.mt-xs {
+  margin-top: 0.25rem;
+}
+.mr-xs {
+  margin-right: 0.25rem;
+}
+*/
+
+/*
+horizontal and vertical
+
+.mx-xs {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.my-xs {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+*/
+/* ---------------- margin: end --------------- */
+
+// paddings
+
+@each $size, $val in $sizes {
+  // Generate class for no direction (applies to all sides)
+  .p-#{$size} {
+    padding: $val;
+  }
+  // Generate classes for directions
+  @each $direction, $dir in $directions {
+    // Check if direction is horizontal or vertical
+    @if $dir == x {
+      .p#{$direction}-#{$size} {
+        padding-left: $val;
+        padding-right: $val;
+      }
+    } @else if $dir == y {
+      .p#{$direction}-#{$size} {
+        padding-top: $val;
+        padding-bottom: $val;
+      }
+    } @else {
+      // Generate classes for single direction
+      .p#{$direction}-#{$size} {
+        padding-#{$dir}: $val;
+      }
+    }
+  }
+}
+
+// remove paddings
+.p-remove {
+    padding: 0;
+}
+
+// Generate .p-remove-[direction] classes
+@each $direction, $dir in $directions {
+    @if $dir == x {
+        .p-remove-#{$direction} {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    } @else if $dir == y {
+        .p-remove-#{$direction} {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    } @else {
+        .p-remove-#{$direction} {
+            padding-#{$dir}: 0;
+        }
+    }
+}
+/* -------------- example outputs ------------- */
+/*
+no direction, just size
+
+.p-xs {
+  padding: 0.25rem;
+}
+.p-sm {
+  padding: 0.5rem;
+}
+*/
+
+/*
+single direction
+
+.pt-xs {
+  padding-top: 0.25rem;
+}
+.pr-xs {
+  padding-right: 0.25rem;
+}
+*/
+
+/*
+horizontal and vertical
+
+.px-xs {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.py-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+*/
+/* --------------- padding: end --------------- */
+
+//NOTE
+/* --------------- Total Classes --------------- */
+/*
+Total Margin Classes: 42
+- Single direction: 36 (6 sizes * 6 directions)
+- No direction: 6 (6 sizes)
+
+Total Padding Classes: 42
+- Single direction: 36 (6 sizes * 6 directions)
+- No direction: 6 (6 sizes)
+
+Total Removing Margin Classes: 7
+- Single direction: 7 (7 directions)
+
+Total Removing Padding Classes: 7
+- Single direction: 7 (7 directions)
+
+Total Classes: 98
+*/
