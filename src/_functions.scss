@@ -1,0 +1,25 @@
+@use 'sass:math';
+// Function to convert px to rem
+@function get-rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Function to convert rem to px
+@function get-px($rem, $base: 16px) {
+  @return math.div($rem, 1) * $base;
+}
+
+// Spacer function; used to multiply the current spacing size by a factor
+@function spacer($current-size, $factor: 1) {
+  @return $current-size * $factor;
+}
+
+// Function to create background color from based color
+@function get-contrast-color($base-color) {
+  $lightness: lightness($base-color);
+  @if $lightness > 50% {
+    @return mix($base-color, black, 20%);
+  } @else {
+    @return mix($base-color, white, 20%);
+  }
+}

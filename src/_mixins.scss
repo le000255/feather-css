@@ -116,3 +116,68 @@
     }
   }
 }
+
+// Form mixins
+
+// form-group: text theme
+@mixin form-group-text-theme($theme: $theme-default) {
+  .form-label {
+    display: block;
+    font-weight: map-get($theme, 'font-weight-label');
+    margin-bottom: map-get($theme, 'margin-b-label');
+    color: map-get($theme, 'clr-label');
+  }
+
+  .form-control {
+    width: 100%;
+    padding: map-get($theme, 'padding-f-control');
+    border: map-get($theme, 'border-width-f-control') solid map-get($theme, 'clr-border-f-control');
+    border-radius: map-get($theme, 'border-radius-f-control');
+    font-size: map-get($theme, 'font-size-f-control');
+    color: map-get($theme, 'clr-f-control');
+    background-color: map-get($theme, 'bg-f-control');
+
+    &:focus {
+      border-color: map-get($theme, 'clr-focus-f-control');
+      background-color: map-get($theme, 'bg-focus-f-control');
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(map-get($theme, 'clr-focus-f-control'), 0.4);
+    }
+
+    &::placeholder {
+      color: map-get($theme, 'clr-placeholder');
+    }
+  }
+}
+
+// form-group: textarea theme
+@mixin form-textarea-theme($theme: $theme-default) {
+  .form-label {
+    display: block;
+    font-weight: map-get($theme, 'font-weight-label');
+    margin-bottom: map-get($theme, 'margin-b-label');
+    color: map-get($theme, 'clr-label');
+  }
+
+  .form-control {
+    width: 100%;
+    padding: map-get($theme, 'padding-f-control');
+    border: map-get($theme, 'border-width-f-control') solid map-get($theme, 'clr-border-f-control');
+    border-radius: map-get($theme, 'border-radius-f-control');
+    font-size: map-get($theme, 'font-size-f-control');
+    color: map-get($theme, 'clr-f-control');
+    background-color: map-get($theme, 'bg-f-control');
+    resize: vertical;
+
+    &:focus {
+      border-color: map-get($theme, 'clr-focus-f-control');
+      background-color: map-get($theme, 'bg-focus-f-control');
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(map-get($theme, 'clr-focus-f-control'), 0.4);
+    }
+
+    &::placeholder {
+      color: map-get($theme, 'clr-placeholder');
+    }
+  }
+}
