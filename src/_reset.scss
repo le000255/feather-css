@@ -31,7 +31,15 @@ ol[role='list'] {
 /* Set core root defaults */
 html:focus-within {
     scroll-behavior: smooth;
+   
 }
+// remove margin
+html, body {
+    margin: 0 auto !important;
+    width: 100%;
+    max-width: 98%;
+}
+
 
 /* Set core body defaults */
 body {
