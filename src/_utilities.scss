@@ -164,12 +164,14 @@ horizontal and vertical
     .p-remove-#{$direction} {
       padding-left: 0;
       padding-right: 0;
+
     }
   } @else if $dir == y {
     .p-remove-#{$direction} {
       padding-top: 0;
       padding-bottom: 0;
     }
+
   } @else {
     .p-remove-#{$direction} {
       padding-#{$dir}: 0;
@@ -255,6 +257,7 @@ $h-sizes: (
   ),
 );
 
+
 .fe-h {
   @each $size, $props in $h-sizes {
     &#{$size} {
@@ -317,6 +320,7 @@ $bg-colors: (
   'dark': $fe-clr-dark,
 );
 
+
 .fe-bg {
   @each $color, $val in $bg-colors {
     &-#{$color} {
@@ -346,3 +350,4 @@ $list-styles: (
     }
   }
 }
+
