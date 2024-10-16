@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- code snippet styling -->
   <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/a11y-dark.min.css">
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/night-owl.min.css">
 
   <link rel="stylesheet" href="dist/feather-css.css">
 
@@ -18,6 +18,19 @@
       background-color: lightgray;
     }
 
+    pre code {
+      max-height: 400px;
+      tab-size: 2;
+      font-size: 1rem;
+      letter-spacing: 0.02rem;
+      margin: 0;
+      overflow: auto;
+
+      border-radius: 5px;
+      line-height: 1.8;
+      /* padding: 0 !important; */
+      /* padding-bottom: 1rem !important; */
+    }
 
     code {
       color: hsl(0, 72%, 53%);
@@ -47,7 +60,7 @@
     <section id="typography" class="fe-container">
       <h2>Typography</h2>
       <div class="fe-typography-container">
-        <h3>Heading</h3>
+        <h3>Headings</h3>
         <p>
           FeatherCS provides 6 heading classes to style your headings. The classes are named as <code>fe-h1</code> to
           <code>fe-h6</code>. The following example demonstrates the usage of heading classes.
@@ -60,10 +73,9 @@
         <span class="fe-h5">Heading 5 - The quick brown fox jumps over the lazy dog</span>
         <span class="fe-h6">Heading 6 - The quick brown fox jumps over the lazy dog</span>
         <h4>Usage</h4>
-        <div class="fe-container xs mx-remove">
-          <pre>
-            <code class="language-html">// To be added later </code>
-          </pre>
+        <div class="fe-container sm mx-remove">
+          <pre><code id="code-heading" class=
+            "usage language-html"></code></pre>
         </div>
 
         <h3>Paragraph</h3>
@@ -78,7 +90,7 @@
           praesentium eius enim nemo fugiat ipsum! Consectetur odit et est in, explicabo incidunt eaque, quo quisquam
           deleniti nihil animi distinctio accusantium ab.
         </p>
-        <h3>Text alignment</h3>
+        <h3>Text alignments</h3>
         <h4>Demo</h4>
         <div class="fe-container fe-row gap-md">
           <div class="fe-col fe-col-xs-12 fe-col-sm-6 fe-text-left">
@@ -118,13 +130,13 @@
         </div>
 
         <h4>Usage</h4>
-        <div class="fe-container xs mx-remove">
+        <div class="fe-container sm mx-remove">
           <pre>
-            <code class="language-html">// To be added later </code>
+            <code id="code-text-alignments" class="usage language-html">// To be added later </code>
           </pre>
         </div>
 
-        <h3>Text colour</h3>
+        <h3>Text colours</h3>
         <h4>Demo</h4>
         <div class="fe-container">
           <span class="fe-text-primary">Primary text</span> <span>|</span>
@@ -141,16 +153,16 @@
 
         </div>
         <h4>Usage</h4>
-        <div class="fe-container xs mx-remove">
+        <div class="fe-container sm mx-remove">
           <pre>
-            <code class="language-html">// To be added later </code>
+            <code id="code-text-colours" class="usage language-html">// To be added later </code>
           </pre>
     </section>
     <!-- End Typograhy -->
 
     <!-- List seciton -->
     <section id="list" class="fe-container">
-      <h2>List</h2>
+      <h2>Lists</h2>
       <h3>Demo</h3>
       <h4>Unordered List</h4>
       <div class="fe-row gap-md">
@@ -200,9 +212,9 @@
         <li>Item 3</li>
       </ol>
       <h3>Usage</h3>
-      <div class="fe-container xs mx-remove">
+      <div class="fe-container sm mx-remove">
         <pre>
-          <code class="language-html">// To be added later </code>
+          <code id="code-lists" class="usage language-html">// To be added later </code>
         </pre>
     </section>
     <!-- End List -->
@@ -210,7 +222,13 @@
     <!-- Table Section-->
     <section class="fe-container" id="tables">
 
-      <h2>Table</h2>
+      <h2>Tables</h2>
+      <p>
+        FeatherCS tables are responsive by default. They automatically adjust to the width of their container, ensuring
+        that the content is always visible and accessible on any device. For better responsiveness, you can wrap your
+        tables in a container with the class <code>fe-table-container</code> to enable horizontal scrolling on smaller
+        screens.
+      </p>
       <h3>Demo</h3>
       <h4>Simple Table</h4>
       <div class="fe-table-container">
@@ -267,9 +285,9 @@
         </table>
       </div>
       <h3>Usage</h3>
-      <div class="fe-container xs mx-remove">
+      <div class="fe-container sm mx-remove">
         <pre>
-          <code class="language-html">// To be added later </code>
+          <code id="code-tables" class="usage language-html">// To be added later </code>
         </pre>
     </section>
     <!-- Table Section end -->
@@ -277,28 +295,40 @@
 
     <!-- Buttons Section-->
     <section id="buttons" class="fe-container">
-
-      <div>
-        <h3>Light Mode</h3>
-        <div class="fe-button-container" data-mode="light">
-          <button class="fe-btn-light-default">Default</button>
-          <button class="fe-btn-light-primary">Primary</button>
-          <button class="fe-btn-light-secondary">Secondary</button>
-          <button class="fe-btn-light-success">Success</button>
-          <button class="fe-btn-light-danger">Danger</button>
-          <button class="fe-btn-light-disabled" disabled="">Disabled</button>
-        </div>
-
-        <h3>Dark Mode</h3>
-        <div class="fe-button-container" data-mode="dark">
-          <button class="fe-btn-dark-default">Default</button>
-          <button class="fe-btn-dark-primary">Primary</button>
-          <button class="fe-btn-dark-secondary">Secondary</button>
-          <button class="fe-btn-dark-success">Success</button>
-          <button class="fe-btn-dark-danger">Danger</button>
-          <button class="fe-btn-dark-disabled" disabled="">Disabled</button>
-        </div>
+      <h2>Buttons</h2>
+      <h3>Demo</h3>
+      <h4>Light mode</h4>
+      <p>
+        FeatherCS provides a variety of button classes to style your buttons. The classes are named as
+        <code>fe-btn-{mode}-{variant}</code> where <code>{mode}</code> can be <code>light</code> or <code>dark</code>,
+        and
+        <code>{variant}</code> can be <code>default</code>,
+        <code>primary</code>,
+        <code>secondary</code>, <code>success</code>, <code>danger</code>, or <code>disabled</code>. The following
+        examples demonstrate the usage of button classes.
+      </p>
+      <div class="fe-button-container fe-container sm p-md mx-remove fe-bg-light" data-mode="light">
+        <button class="fe-btn-light-default">Default</button>
+        <button class="fe-btn-light-primary">Primary</button>
+        <button class="fe-btn-light-secondary">Secondary</button>
+        <button class="fe-btn-light-success">Success</button>
+        <button class="fe-btn-light-danger">Danger</button>
+        <button class="fe-btn-light-disabled" disabled="">Disabled</button>
       </div>
+      <h4>Dark Mode</h4>
+      <div class="fe-button-container fe-container sm p-md mx-remove fe-bg-dark">
+        <button class="fe-btn-dark-default">Default</button>
+        <button class="fe-btn-dark-primary">Primary</button>
+        <button class="fe-btn-dark-secondary">Secondary</button>
+        <button class="fe-btn-dark-success">Success</button>
+        <button class="fe-btn-dark-danger">Danger</button>
+        <button class="fe-btn-dark-disabled" disabled="">Disabled</button>
+      </div>
+      <h3>Usage</h3>
+      <div class="fe-container sm mx-remove">
+        <pre>
+          <code id="code-buttons" class="usage language-html">// To be added later </code>
+        </pre>
     </section>
     <!-- Buttons Section end -->
 
@@ -309,13 +339,32 @@
 
         <h2>Layout</h2>
         <h3>Container</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis aliquam ducimus asperiores voluptatem
-          provident recusandae sed harum dolor sequi exercitationem.</p>
+        <p>
+          FeatherCS provides a container class to wrap your content. The container class is named as
+          <code>fe-container</code>. This is the default container with maximum width of <b>1200px</b>.
+        </p>
+        <p>
+          There are helper classes helping control the size of the container at different breakpoints. These classes are
+          named as <code>fe-container {size}</code>, where <code>{size}</code> can be <code>xs</code>, <code>sm</code>,
+          <code>md</code>, <code>lg</code>, <code>xl</code>, or <code>xxl</code>. These classes help in making the
+          container responsive by adjusting its width according to the screen size. For example,
+          <code>fe-container md</code> will apply a medium size container that adjusts its width based on the medium
+          breakpoint.
+        </p>
+
+        <ul>
+          <li><code>xs</code>: Extra small (0px and up)</li>
+          <li><code>sm</code>: Small (576px and up)</li>
+          <li><code>md</code>: Medium (768px and up)</li>
+          <li><code>lg</code>: Large (992px and up)</li>
+          <li><code>xl</code>: Extra large (1200px and up)</li>
+          <li><code>xxl</code>: Extra extra large (1400px and up)</li>
+        </ul>
       </div>
       <div>
         <!-- SECTION Margin & padding notation -->
         <div class="fe-container py-md">
-          <h2>Notation</h2>
+          <h3>Margin & padding</h3>
           <p>Spacing utilities that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them.
             This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query.
           </p>
@@ -327,13 +376,13 @@
             apply the classes with this format:<code>{property}-remove</code> or <code>{property}-remove-{sides}</code>.
           </p>
 
-          <h3>Where property is one of:</h3>
+          <h4>Where property is one of:</h4>
           <ul>
             <li><code>m</code> - for classes that set <code>margin</code></li>
             <li><code>p</code> - for classes that set <code>padding</code></li>
           </ul>
 
-          <h3>Where sides is one of:</h3>
+          <h4>Where sides is one of:</h4>
           <ul>
             <li><code>b</code> - for classes that set <code>margin-bottom</code> or <code>padding-bottom</code></li>
 
@@ -357,7 +406,7 @@
               of the element</li>
           </ul>
 
-          <h3>Where size is one of:</h3>
+          <h4>Where size is one of:</h4>
           <ul>
             <li><code>xs</code> - for classes that set the margin or padding to <code>$fe-spacing-xs</code></li>
             <li><code>sm</code> - for classes that set the margin or padding to <code>$fe-spacing-sm</code></li>
@@ -367,12 +416,11 @@
             <li><code>xxl</code> - for classes that set the margin or padding to <code>$fe-spacing-xxl</code></li>
           </ul>
           <!-- Codepen example -->
-          <h3>Examples</h3>
-          <div class="fe-container xs mx-remove">
+          <h4>Examples</h4>
+          <div class="fe-container sm mx-remove">
             <!-- Snippet example -->
-            <pre style="tab-size: 2; margin: 0; white-space: pre;
-            overflow-x: auto;">
-              <code class="language-css">/* To be added later */</code>
+            <pre>
+              <code id="code-mp" class="usage language-html">/* To be added later */</code>
             </pre>
           </div>
           <!-- Example end -->
@@ -383,7 +431,33 @@
 
     <section id="layout" class="fe-container py-md ">
       <h2>Grid layout</h2>
-      <div class="fe-row fe-container gap-sm">
+      <p>
+        FeatherCS provides a 12-column grid system to help you create responsive layouts. The grid system is built using
+        CSS grid and is fully responsive. The grid system is based on the following classes: <code>fe-row</code> and
+        <code>fe-col</code>.
+      </p>
+
+      <h3>Row</h3>
+      <p>
+        The <code>fe-row</code> class is used to create a row in the grid system.
+        The row class is used to create a horizontal group of columns. You can also use the <code>gap</code>
+        class to add spacing between the columns.
+      <p>
+        The gap property in CSS Grid
+        Layout defines the space between grid items and can be applied to both rows and columns. FeatherCS provides
+        several gap sizes that you can use:
+      </p>
+      <ul>
+        <li><code>gap-xs</code> - for an extra small gap</li>
+        <li><code>gap-sm</code> - for a small gap</li>
+        <li><code>gap-md</code> - for a medium gap</li>
+        <li><code>gap-lg</code> - for a large gap</li>
+      </ul>
+      <p>
+        For example, you can use the <code>grid-gap-md </code>class to set a medium gap between grid items
+      </p>
+
+      <div class="fe-row fe-container gap-md">
         <div class="fe-col-full example-box">
           Column 1
         </div>
@@ -394,12 +468,16 @@
           Column 3
         </div>
         <div class="fe-col fe-col-xs-12 fe-col-sm-8 fe-col-md-6 fe-col-lg-3 example-box">
-
           Column 4
         </div>
 
-
       </div>
+
+      <h3>Usage</h3>
+      <div class="fe-container sm mx-remove">
+        <pre>
+          <code id="code-grid" class="usage language-html">// To be added later </code>
+        </pre>
 
     </section>
     <!-- Layout end -->
@@ -408,6 +486,15 @@
     <!-- Forms section -->
     <section id="form" class="fe-container py-md">
       <h2>Forms</h2>
+      <p>
+        FeatherCS provides a variety of form classes to style your forms. The classes are named as
+        <code>fe-form-group-{type}</code> where <code>{type}</code> can be <code>text</code>, and <code>textarea</code>. The following examples demonstrate the usage of form classes.
+      </p>
+      <p>
+        As FeatherCSS is not a mature framework, it lacks various form elements.We are expecting to add more form elements in the future.
+      </p>
+      
+      <h3>Demo</h3>
       <form class="fe-container xs mx-remove">
         <div class="fe-form-group-text">
           <label for="name" class="form-label">Name</label>
@@ -428,6 +515,12 @@
         <div class="fe-form-group-btn btn-sm">
           <button type="button" class="fe-btn-light-default">Send message</button>
         </div>
+      </form>
+      <h3>Usage</h3>
+      <div class="fe-container sm mx-remove">
+        <pre>
+          <code id="code-forms" class="usage language-html">// To be added later </code>
+        </pre>
     </section>
 
   </main>
@@ -437,5 +530,6 @@
 <!-- code snippet js -->
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
+<script type="module" src="js/main.js"></script>
 
 </html>
