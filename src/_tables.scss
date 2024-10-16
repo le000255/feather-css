@@ -1,5 +1,12 @@
 @use 'sass:color';
 
+//Table container
+// this helps to keep the table from overflowing its container
+.fe-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
 //Simple table
 .fe-simple-table {
   @include table-styles;
