@@ -324,3 +324,25 @@ $bg-colors: (
     }
   }
 }
+
+
+// list styles
+$list-styles: (
+  'bullet': disc,
+  'circle': circle,
+  'square': square,
+  'decimal': decimal,
+);
+
+.fe-list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+  @each $style, $val in $list-styles {
+    &-#{$style} {
+      list-style-type: $val;
+    }
+  }
+}
