@@ -21,8 +21,6 @@ $fe-bg-danger: hsl(0, 72%, 90%);
 $fe-bg-light: hsl(210, 17%, 98%);
 $fe-bg-dark: hsl(210, 10%, 20%);
 
-
-
 // Text color variables
 $fe-clr-text-primary: hsl(0, 0%, 20%);
 $fe-clr-text-secondary: hsl(210, 9%, 45%);
@@ -48,6 +46,35 @@ $fe-font-size-md: 1rem;
 $fe-font-size-lg: 1.125rem;
 $fe-font-size-xl: 1.25rem;
 $fe-font-size-xxl: 1.5rem;
+
+// font heading size variables
+$fe-font-size-h1: 2.5rem;
+$fe-font-size-h2: 2rem;
+$fe-font-size-h3: 1.75rem;
+$fe-font-size-h4: 1.5rem;
+$fe-font-size-h5: 1.25rem;
+$fe-font-size-h6: 1rem;
+
+// font line height variables (heading)
+$fe-font-line-height-h1: get-line-height($fe-font-size-h1);
+$fe-font-line-height-h2: get-line-height($fe-font-size-h2);
+$fe-font-line-height-h3: get-line-height($fe-font-size-h3);
+$fe-font-line-height-h4: get-line-height($fe-font-size-h4);
+$fe-font-line-height-h5: get-line-height($fe-font-size-h5);
+$fe-font-line-height-h6: get-line-height($fe-font-size-h6);
+
+// heading margin variables
+$fe-heading-margin-h1: get-heading-margin($fe-font-size-h1);
+$fe-heading-margin-h2: get-heading-margin($fe-font-size-h2);
+$fe-heading-margin-h3: get-heading-margin($fe-font-size-h3);
+$fe-heading-margin-h4: get-heading-margin($fe-font-size-h4);
+$fe-heading-margin-h5: get-heading-margin($fe-font-size-h5);
+$fe-heading-margin-h6: get-heading-margin($fe-font-size-h6);
+
+// heading letter spacing variable
+// this helps to make the heading text more readable
+$fe-heading-letter-spacing: -0.022em;
+
 
 // font weight variables
 $fe-font-weight-light: 300;

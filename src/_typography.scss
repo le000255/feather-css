@@ -1,52 +1,75 @@
 body {
-    font-family: $fe-font-family-default;
-    color: $fe-clr-text-dark;
+  font-family: $fe-font-family-default;
+  color: $fe-clr-text-dark;
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $fe-font-weight-semi-bold;
+  letter-spacing: $fe-heading-letter-spacing;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: $fe-font-size-h1;
+  line-height: $fe-font-line-height-h1;
+  margin-bottom: $fe-heading-margin-h1 * 0.6;
+  margin-top: $fe-heading-margin-h1;
 }
-
 h2 {
-    font-size: 2rem;
+  font-size: $fe-font-size-h2;
+  line-height: $fe-font-line-height-h2;
+  margin-bottom: $fe-heading-margin-h2 * 0.6;
+  margin-top: $fe-heading-margin-h2;
 }
 
 h3 {
-    font-size: 1.75rem;
+  font-size: $fe-font-size-h3;
+  line-height: $fe-font-line-height-h3;
+  margin-bottom: $fe-heading-margin-h3 * 0.6;
+  margin-top: $fe-heading-margin-h3;
 }
 
 h4 {
-    font-size: 1.5rem;
+  font-size: $fe-font-size-h4;
+  line-height: $fe-font-line-height-h4;
+  margin-bottom: $fe-heading-margin-h4 * 0.6;
+  margin-top: $fe-heading-margin-h4;
 }
 
 h5 {
-    font-size: 1.25rem;
+  font-size: $fe-font-size-h5;
+  line-height: $fe-font-line-height-h5;
+  margin-bottom: $fe-heading-margin-h5 * 0.6;
+  margin-top: $fe-heading-margin-h5;
 }
 
 h6 {
-    font-size: 1rem;
+  font-size: $fe-font-size-h6;
+  line-height: $fe-font-line-height-h6;
+  margin-bottom: $fe-heading-margin-h6 * 0.6;
+  margin-top: $fe-heading-margin-h6;
 }
 
 // text
 p {
-    font-size: 1rem;
-    line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 small {
-    font-size: 0.875rem;
+  font-size: 0.875rem;
 }
 
 span {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 blockquote {
-    font-size: 1.25rem;
-    font-style: italic;
+  font-size: 1.25rem;
+  font-style: italic;
 }
