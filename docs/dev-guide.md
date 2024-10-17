@@ -46,35 +46,44 @@ The project repository is organized as follows:
 
 ```
 feather-css-repo/
-├── css/
-│   ├── style.css
-│   ├── style.min.css
+├── dist/
+│   ├── feather-css.css
+│   ├── feather-css.css.map
 ├── js/
-│   ├── script.js
-│   ├── script.min.js
-├── scss/
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   ├── _utilities.scss
+│   ├── data.js
+│   ├── main.js
+├── src/
+│   ├── buttons.scss
+│   ├── _forms.scss
 │   ├── _functions.scss
-│   ├── main.scss
+│   ├── _layout.scss
+│   ├── _lists.scss
+│   ├── _mixins.scss
+│   ├── _reset.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   ├── _utilities.scss
+│   ├── _variables.scss
+│   ├── feather-css.scss
 ├── docs/
-│   ├── userguide.md
+│   ├── build.md
+│   ├── dev-guide.md
+│   ├── workflow-terminal.md
+│   ├── workflow-ui.md
 │   ├── README.md
 ├── index.html
-├── package.json
-├── gulpfile.js
-└── README.md
+├── README.md
+└── style.css
+
 ```
 
-- **css/**: Contains the compiled CSS files. You will link to these files in your HTML.
+- **dist/**: Contains the compiled CSS files. You will link to these files in your HTML.
 - **js/**: Contains JavaScript files for additional functionality.
-- **scss/**: Contains the SASS source files. You can customize these files to change the styles.
+- **src/**: Contains the SASS source files. You can customize these files to change the styles.
 - **docs/**: Contains documentation files, including the user guide.
 - **index.html**: A sample HTML file to showcase the usage of FeatherCSS.
-- **package.json**: Lists the project dependencies and scripts.
-- **gulpfile.js**: Contains Gulp tasks for automating development workflows.
 - **README.md**: Provides an overview and instructions for the project.
+- **style.css**: A custom stylesheet of the showcasing doc (index.html).
 
 > [!NOTE] 
 _Some files and folders, such as `style.css`, `js/`, `README.md`, and `docs/`, are primarily for showcasing or guiding purposes and may not be necessary for your development._
@@ -90,11 +99,18 @@ your-repo/
 │   ├── script.js
 │   ├── script.min.js
 ├── scss/
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   ├── _utilities.scss
+│   ├── buttons.scss
+│   ├── _forms.scss
 │   ├── _functions.scss
-│   ├── main.scss
+│   ├── _layout.scss
+│   ├── _lists.scss
+│   ├── _mixins.scss
+│   ├── _reset.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   ├── _utilities.scss
+│   ├── _variables.scss
+│   ├── feather-css.scss
 ├── index.html
 ├── package.json (optional)
 ├── gulpfile.js (optional)
