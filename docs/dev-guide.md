@@ -77,14 +77,13 @@ feather-css-repo/
 
 ```
 
-- **css/**: Contains the compiled CSS files. You will link to these files in your HTML.
+- **dist/**: Contains the compiled CSS files. You will link to these files in your HTML.
 - **js/**: Contains JavaScript files for additional functionality.
-- **scss/**: Contains the SASS source files. You can customize these files to change the styles.
+- **src/**: Contains the SASS source files. You can customize these files to change the styles.
 - **docs/**: Contains documentation files, including the user guide.
 - **index.html**: A sample HTML file to showcase the usage of FeatherCSS.
-- **package.json**: Lists the project dependencies and scripts.
-- **gulpfile.js**: Contains Gulp tasks for automating development workflows.
 - **README.md**: Provides an overview and instructions for the project.
+- **style.css**: A custom stylesheet of the showcasing doc (index.html).
 
 > [!NOTE] 
 _Some files and folders, such as `style.css`, `js/`, `README.md`, and `docs/`, are primarily for showcasing or guiding purposes and may not be necessary for your development._
