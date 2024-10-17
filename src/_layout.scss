@@ -1,0 +1,81 @@
+// layout components
+
+/* -------------------------------------------- */
+/*                   container                  */
+/* -------------------------------------------- */
+.fe-container {
+  width: 100%;
+  //default container width
+  max-width: $fe-screen-lg;
+  margin-right: auto;
+  margin-left: auto;
+  &-fluid {
+    max-width: 100%;
+  }
+
+  // Apply container sizes mixin
+  @include container-sizes();
+
+  // container sizes mixin outputs
+  /*
+  .fe-container.xs {...}
+  .fe-container.sm {...}
+  .fe-container.md {...}
+  ...
+  */
+
+  &.mx-remove {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+/* -------------------------------------------- */
+/*                  grid system                 */
+/* -------------------------------------------- */
+
+.fe-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@include grid-gap();
+
+// grid-gap outputs
+/* 
+.fe-row.gap-xs {...}
+.fe-row.gap-sm {...}
+.fe-row.gap-md {...}
+... 
+*/
+
+// simple column without breakpoints
+// when no breakpoints are needed
+@include grid-cols-simple();
+
+// grid-cols-simple outputs
+/*
+.fe-col-full {...}
+.fe-col-half {...}
+.fe-col-1 {...}
+...
+*/
+
+// column with breakpoints
+
+@include grid-cols-breakpoints();
+// grid-cols-breakpoints outputs
+
+/*
+.fe-col-xs-1 {...}
+.fe-col-xs-2 {...}
+.fe-col-xs-3 {...}
+...
+*/
+
+// fallback: if breakpoints are smaller than $fe-screen-xs
+// change all grid columns to span 12
+.fe-col {
+  @media screen and (width < $fe-screen-xs) {
+    grid-column: span 12;
+  }
+}

@@ -1,0 +1,145 @@
+/* Custom stylesheet */
+html {
+  width: 100%;
+}
+body {
+  /* background-color: #1d1818; */
+  /* background-color: lightgray; */
+  background-color: #fdfdfc;
+  overflow-x: clip;
+}
+
+header {
+  /* full bleed header */
+  position: relative;
+  width: 100vw;
+  left: 50%;
+
+  margin-inline-start: -50vw;
+  /* margin inline start helps to center the header */
+
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  min-height: 40vh;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  width: 100%;
+  text-align: center;
+}
+
+/* Main layout */
+
+.doc-container {
+  width: 100%;
+  grid-template-columns: auto minmax(768px, 1fr);
+  display: grid;
+  grid-template-areas: 'doc-nav main';
+}
+
+#doc-nav {
+  grid-area: doc-nav;
+  /* max-height: 40svh; */
+  /* width: 100%; */
+  height: fit-content;
+  z-index: 1000;
+  overflow: clip;
+  /* overflow-y: scroll; */
+  /* height: 40%; */
+  position: sticky;
+  margin-top: 20svh;
+  padding: 1rem 0.5rem;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#doc-nav nav {
+  min-width: 160px;
+  border: 1px solid #989797;
+  border-radius: 5px;
+  background-color: #d5d5d5;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#doc-nav ul {
+  padding-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+#doc-nav li {
+  margin-bottom: 0.25rem;
+}
+#doc-nav details {
+  padding: 0.5rem 1rem;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+@media screen and (width <= 900px) {
+  .doc-container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'doc-nav'
+      'main'
+      '.';
+
+    gap: 0;
+  }
+  #doc-nav {
+    width: 100%;
+    /* display: none; */
+    max-width: 768px;
+    margin: 2rem auto;
+    height: fit-content;
+  }
+}
+
+main {
+  grid-area: main;
+}
+
+pre code {
+  max-height: 400px;
+  tab-size: 2;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  margin: 0;
+  overflow: auto;
+
+  border-radius: 5px;
+  line-height: 1.8;
+  /* padding: 0 !important; */
+  /* padding-bottom: 1rem !important; */
+}
+
+code {
+  color: hsl(0, 72%, 53%);
+  font-size: 1.15rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.example-box {
+  padding: 1rem;
+  background-color: grey;
+  margin-bottom: 1rem;
+  border: 1px solid blue;
+  /* filter: contrast(); */
+}

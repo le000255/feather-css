@@ -1,3 +1,4 @@
+@import 'functions';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 // Color variables
@@ -9,6 +10,16 @@ $fe-clr-warning: hsl(45, 100%, 50%);
 $fe-clr-danger: hsl(0, 72%, 53%);
 $fe-clr-light: hsl(210, 17%, 98%);
 $fe-clr-dark: hsl(210, 10%, 20%);
+
+// Background color variables
+$fe-bg-primary: hsl(228, 58%, 95%);
+$fe-bg-secondary: hsl(208, 7%, 90%);
+$fe-bg-success: hsl(134, 61%, 90%);
+$fe-bg-info: hsl(188, 78%, 90%);
+$fe-bg-warning: hsl(45, 100%, 90%);
+$fe-bg-danger: hsl(0, 72%, 90%);
+$fe-bg-light: hsl(210, 17%, 98%);
+$fe-bg-dark: hsl(210, 10%, 20%);
 
 // Text color variables
 $fe-clr-text-primary: hsl(0, 0%, 20%);
@@ -28,7 +39,61 @@ $fe-font-color-default: $fe-clr-text-primary;
 $fe-line-height-default: 1.4;
 // $fe-letter-spacing-default: 0.5px;
 
+// font size variables
+$fe-font-size-xs: 0.75rem;
+$fe-font-size-sm: 0.875rem;
+$fe-font-size-md: 1rem;
+$fe-font-size-lg: 1.125rem;
+$fe-font-size-xl: 1.25rem;
+$fe-font-size-xxl: 1.5rem;
 
+// font heading size variables
+$fe-font-size-h1: 2.5rem;
+$fe-font-size-h2: 2rem;
+$fe-font-size-h3: 1.75rem;
+$fe-font-size-h4: 1.5rem;
+$fe-font-size-h5: 1.25rem;
+$fe-font-size-h6: 1rem;
+
+// font line height variables (heading)
+$fe-font-line-height-h1: get-line-height($fe-font-size-h1);
+$fe-font-line-height-h2: get-line-height($fe-font-size-h2);
+$fe-font-line-height-h3: get-line-height($fe-font-size-h3);
+$fe-font-line-height-h4: get-line-height($fe-font-size-h4);
+$fe-font-line-height-h5: get-line-height($fe-font-size-h5);
+$fe-font-line-height-h6: get-line-height($fe-font-size-h6);
+
+// heading margin variables
+$fe-heading-margin-h1: get-heading-margin($fe-font-size-h1);
+$fe-heading-margin-h2: get-heading-margin($fe-font-size-h2);
+$fe-heading-margin-h3: get-heading-margin($fe-font-size-h3);
+$fe-heading-margin-h4: get-heading-margin($fe-font-size-h4);
+$fe-heading-margin-h5: get-heading-margin($fe-font-size-h5);
+$fe-heading-margin-h6: get-heading-margin($fe-font-size-h6);
+
+// heading letter spacing variable
+// this helps to make the heading text more readable
+$fe-heading-letter-spacing: -0.022em;
+
+
+// font weight variables
+$fe-font-weight-light: 300;
+$fe-font-weight-normal: 400;
+$fe-font-weight-medium: 500;
+$fe-font-weight-semi-bold: 600;
+$fe-font-weight-bold: 700;
+
+// Border radius variables
+$fe-border-radius-xs: 0.25rem;
+$fe-border-radius-sm: 0.5rem;
+$fe-border-radius-md: 1rem;
+$fe-border-radius-lg: 1.5rem;
+
+// Border width variables
+$fe-border-width-xs: 1px;
+$fe-border-width-sm: 2px;
+$fe-border-width-md: 3px;
+$fe-border-width-lg: 4px;
 
 // Spacing variables
 $fe-spacing-xs: 0.25rem;
@@ -46,4 +111,3 @@ $fe-screen-lg: 1200px;
 $fe-screen-xl: 1400px;
 $fe-screen-xxl: 1600px;
 $fe-screen-4k: 2560px;
-

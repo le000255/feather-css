@@ -1,0 +1,147 @@
+// Create form styles
+
+// Theme maps
+$theme-default: (
+  'font-weight-label': $fe-font-weight-semi-bold,
+  'clr-label': $fe-clr-text-dark,
+  'clr-placeholder': $fe-clr-text-secondary,
+  'clr-border-f-control': $fe-clr-secondary,
+  'bg-f-control': $fe-bg-secondary,
+  'bg-focus-f-control': $fe-bg-light,
+  'clr-focus-f-control': $fe-clr-primary,
+  'clr-f-control': $fe-clr-text-dark,
+  'font-size-f-control': $fe-font-size-md,
+  'border-radius-f-control': $fe-border-radius-xs,
+  'border-width-f-control': $fe-border-width-sm,
+  'margin-b-label': $fe-spacing-xs,
+  'padding-f-control': $fe-spacing-sm,
+);
+
+$theme-dark: (
+  'font-weight-label': $fe-font-weight-semi-bold,
+  'clr-label': $fe-clr-text-light,
+  'clr-placeholder': $fe-clr-text-light,
+  'clr-border-f-control': $fe-clr-secondary,
+  'bg-f-control': $fe-bg-dark,
+  'bg-focus-f-control': $fe-bg-dark,
+  'clr-focus-f-control': $fe-clr-primary,
+  'clr-f-control': $fe-clr-text-light,
+  'font-size-f-control': $fe-font-size-md,
+  'border-radius-f-control': $fe-border-radius-xs,
+  'border-width-f-control': $fe-border-width-sm,
+  'margin-b-label': $fe-spacing-xs,
+  'padding-f-control': $fe-spacing-sm,
+);
+
+$theme-primary: (
+  'font-weight-label': $fe-font-weight-semi-bold,
+  'clr-label': $fe-clr-primary,
+  'clr-placeholder': $fe-clr-text-secondary,
+  'clr-border-f-control': $fe-clr-primary,
+  'bg-f-control': $fe-bg-secondary,
+  'bg-focus-f-control': $fe-bg-light,
+  'clr-focus-f-control': $fe-clr-primary,
+  'clr-f-control': $fe-clr-text-dark,
+  'font-size-f-control': $fe-font-size-md,
+  'border-radius-f-control': $fe-border-radius-xs,
+  'border-width-f-control': $fe-border-width-sm,
+  'margin-b-label': $fe-spacing-xs,
+  'padding-f-control': $fe-spacing-sm,
+);
+
+$theme-info: (
+  'font-weight-label': $fe-font-weight-semi-bold,
+  'clr-label': $fe-clr-text-info,
+  'clr-placeholder': $fe-clr-text-secondary,
+  'clr-border-f-control': $fe-clr-info,
+  'bg-f-control': $fe-bg-secondary,
+  'bg-focus-f-control': $fe-bg-light,
+  'clr-focus-f-control': $fe-clr-info,
+  'clr-f-control': $fe-clr-text-dark,
+  'font-size-f-control': $fe-font-size-md,
+  'border-radius-f-control': $fe-border-radius-xs,
+  'border-width-f-control': $fe-border-width-sm,
+  'margin-b-label': $fe-spacing-xs,
+  'padding-f-control': $fe-spacing-sm,
+);
+
+$theme-danger: (
+  'font-weight-label': $fe-font-weight-semi-bold,
+  'clr-label': $fe-clr-text-danger,
+  'clr-placeholder': $fe-clr-text-secondary,
+  'clr-border-f-control': $fe-clr-danger,
+  'bg-f-control': $fe-bg-secondary,
+  'bg-focus-f-control': $fe-bg-light,
+  'clr-focus-f-control': $fe-clr-danger,
+  'clr-f-control': $fe-clr-text-dark,
+  'font-size-f-control': $fe-font-size-md,
+  'border-radius-f-control': $fe-border-radius-xs,
+  'border-width-f-control': $fe-border-width-sm,
+  'margin-b-label': $fe-spacing-xs,
+  'padding-f-control': $fe-spacing-sm,
+);
+
+// Theme names collection
+$themes: (
+  'default': $theme-default,
+  'dark': $theme-dark,
+  'primary': $theme-primary,
+  'info': $theme-info,
+  'danger': $theme-danger,
+);
+
+// Form group text theme
+
+.fe-form-group-text {
+  margin-bottom: $fe-spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $fe-spacing-xs;
+
+  @include form-group-text-theme($theme-default);
+
+  @each $key, $val in $themes {
+    @if $key != 'default' {
+      &.#{$key} {
+        @include form-group-text-theme($val);
+      }
+    }
+  }
+}
+
+// Textarea theme
+
+.fe-form-group-textarea {
+  margin-bottom: $fe-spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $fe-spacing-xs;
+
+  @include form-textarea-theme($theme-default);
+
+  @each $theme-name, $theme in $themes {
+    @if $theme-name != 'default' {
+      &.#{$theme-name} {
+        @include form-textarea-theme($theme);
+      }
+    }
+  }
+}
+
+.fe-form-group-btn {
+  margin-bottom: $fe-spacing-md;
+  margin-top: spacer($fe-spacing-lg, 1.2);
+  display: flex;
+  flex-direction: column;
+  gap: $fe-spacing-xs;
+
+  &.btn-sm {
+    max-width: 40%;
+    width: fit-content;
+    word-break: break-word;
+    @media screen and (width < spacer($fe-screen-sm, 0.5)) {
+      max-width: 100%;
+      width: auto;
+    }
+  }
+}

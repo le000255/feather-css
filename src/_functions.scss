@@ -1,0 +1,36 @@
+@use 'sass:math';
+// Function to convert px to rem
+@function get-rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Function to convert rem to px
+@function get-px($rem, $base: 16px) {
+  @return math.div($rem, 1) * $base;
+}
+
+// Spacer function; used to multiply the current spacing size by a factor
+@function spacer($current-size, $factor: 1) {
+  @return $current-size * $factor;
+}
+
+// Function to create background color from based color
+@function get-contrast-color($base-color) {
+  $lightness: lightness($base-color);
+  @if $lightness > 50% {
+    @return mix($base-color, black, 20%);
+  } @else {
+    @return mix($base-color, white, 20%);
+  }
+}
+
+// function to create line-height from font-size
+// the larger the font-size, the smaller the line-height
+@function get-line-height($font-size) {
+  @return if($font-size > 1.5rem, 1.15, 1.3);
+}
+
+// function to create heading margins based on font-size
+@function get-heading-margin($font-size) {
+  @return if($font-size > 1.5rem, 1.5rem, 1.25rem);
+}

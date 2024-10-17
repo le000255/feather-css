@@ -1,0 +1,353 @@
+// utility classes
+@use 'sass:math';
+//TODO
+// 1. Use example outputs for documentation (index.html)
+//    and delete them after documentation is done
+// 2. Add more utility classes for
+//    - text alignment
+//    - text transformation
+
+/* -------------------------------------------- */
+/*             Margins and paddings             */
+/* -------------------------------------------- */
+// sizes & directions
+// sizes
+$sizes: (
+  'xs': $fe-spacing-xs,
+  'sm': $fe-spacing-sm,
+  'md': $fe-spacing-md,
+  'lg': $fe-spacing-lg,
+  'xl': $fe-spacing-xl,
+  'xxl': $fe-spacing-xxl,
+);
+
+// directions
+$directions: (
+  't': top,
+  'b': bottom,
+  's': left,
+  'e': right,
+  'x': x,
+  'y': y,
+);
+
+// generate utility classes
+// margins
+
+@each $size, $val in $sizes {
+  // Generate class for no direction (applies to all sides)
+  .m-#{$size} {
+    margin: $val;
+  }
+  // Generate classes for directions
+  @each $direction, $dir in $directions {
+    // Check if direction is horizontal or vertical
+    @if $dir == x {
+      .m#{$direction}-#{$size} {
+        margin-left: $val;
+        margin-right: $val;
+      }
+    } @else if $dir == y {
+      .m#{$direction}-#{$size} {
+        margin-top: $val;
+        margin-bottom: $val;
+      }
+    } @else {
+      // Generate classes for single direction
+      .m#{$direction}-#{$size} {
+        margin-#{$dir}: $val;
+      }
+    }
+  }
+}
+
+// remove margins
+.m-remove {
+  margin: 0;
+}
+
+// Generate .m-remove-[direction] classes
+@each $direction, $dir in $directions {
+  @if $dir == x {
+    .m-remove-#{$direction} {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  } @else if $dir == y {
+    .m-remove-#{$direction} {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  } @else {
+    .m-remove-#{$direction} {
+      margin-#{$dir}: 0;
+    }
+  }
+}
+
+/* -------------- example outputs ------------- */
+/* 
+no direction, just size
+
+.m-xs {
+  margin: 0.25rem;
+ }
+.m-sm {
+  margin: 0.5rem;
+ }
+*/
+
+//direction and size
+
+/*
+single direction
+
+.mt-xs {
+  margin-top: 0.25rem;
+}
+.mr-xs {
+  margin-right: 0.25rem;
+}
+*/
+
+/*
+horizontal and vertical
+
+.mx-xs {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.my-xs {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+*/
+/* ---------------- margin: end --------------- */
+
+// paddings
+
+@each $size, $val in $sizes {
+  // Generate class for no direction (applies to all sides)
+  .p-#{$size} {
+    padding: $val;
+  }
+  // Generate classes for directions
+  @each $direction, $dir in $directions {
+    // Check if direction is horizontal or vertical
+    @if $dir == x {
+      .p#{$direction}-#{$size} {
+        padding-left: $val;
+        padding-right: $val;
+      }
+    } @else if $dir == y {
+      .p#{$direction}-#{$size} {
+        padding-top: $val;
+        padding-bottom: $val;
+      }
+    } @else {
+      // Generate classes for single direction
+      .p#{$direction}-#{$size} {
+        padding-#{$dir}: $val;
+      }
+    }
+  }
+}
+
+// remove paddings
+.p-remove {
+  padding: 0;
+}
+
+// Generate .p-remove-[direction] classes
+@each $direction, $dir in $directions {
+  @if $dir == x {
+    .p-remove-#{$direction} {
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+  } @else if $dir == y {
+    .p-remove-#{$direction} {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+  } @else {
+    .p-remove-#{$direction} {
+      padding-#{$dir}: 0;
+    }
+  }
+}
+/* -------------- example outputs ------------- */
+/*
+no direction, just size
+
+.p-xs {
+  padding: 0.25rem;
+}
+.p-sm {
+  padding: 0.5rem;
+}
+*/
+
+/*
+single direction
+
+.pt-xs {
+  padding-top: 0.25rem;
+}
+.pr-xs {
+  padding-right: 0.25rem;
+}
+*/
+
+/*
+horizontal and vertical
+
+.px-xs {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.py-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+*/
+/* --------------- padding: end --------------- */
+
+// typography helpers
+
+// heading classes
+$h-sizes: (
+  '1': (
+    font-size: $fe-font-size-h1,
+    line-height: $fe-font-line-height-h1,
+    margin-bottom: $fe-heading-margin-h1 * 0.6,
+    margin-top: $fe-heading-margin-h1,
+  ),
+  '2': (
+    font-size: $fe-font-size-h2,
+    line-height: $fe-font-line-height-h2,
+    margin-bottom: $fe-heading-margin-h2 * 0.6,
+    margin-top: $fe-heading-margin-h2,
+  ),
+  '3': (
+    font-size: $fe-font-size-h3,
+    line-height: $fe-font-line-height-h3,
+    margin-bottom: $fe-heading-margin-h3 * 0.6,
+    margin-top: $fe-heading-margin-h3,
+  ),
+  '4': (
+    font-size: $fe-font-size-h4,
+    line-height: $fe-font-line-height-h4,
+    margin-bottom: $fe-heading-margin-h4 * 0.6,
+    margin-top: $fe-heading-margin-h4,
+  ),
+  '5': (
+    font-size: $fe-font-size-h5,
+    line-height: $fe-font-line-height-h5,
+    margin-bottom: $fe-heading-margin-h5 * 0.6,
+    margin-top: $fe-heading-margin-h5,
+  ),
+  '6': (
+    font-size: $fe-font-size-h6,
+    line-height: $fe-font-line-height-h6,
+    margin-bottom: $fe-heading-margin-h6 * 0.6,
+    margin-top: $fe-heading-margin-h6,
+  ),
+);
+
+
+.fe-h {
+  @each $size, $props in $h-sizes {
+    &#{$size} {
+      display: block;
+      font-weight: $fe-font-weight-semi-bold;
+      font-size: map-get($props, font-size);
+      line-height: map-get($props, line-height);
+      margin-bottom: map-get($props, margin-bottom);
+      margin-top: map-get($props, margin-top);
+      letter-spacing: $fe-heading-letter-spacing;
+    }
+  }
+}
+
+// text alignment
+
+$t-alignments: (
+  'center': center,
+  'right': right,
+  'left': left,
+  'justify': justify,
+);
+
+.fe-text {
+  @each $alignment, $align in $t-alignments {
+    &-#{$alignment} {
+      text-align: $align;
+    }
+  }
+}
+
+// text colours
+$colors: (
+  'primary': $fe-clr-text-primary,
+  'secondary': $fe-clr-text-secondary,
+  'success': $fe-clr-text-success,
+  'danger': $fe-clr-text-danger,
+  'warning': $fe-clr-text-warning,
+  'info': $fe-clr-text-info,
+  'light': $fe-clr-text-light,
+  'dark': $fe-clr-text-dark,
+);
+.fe-text {
+  @each $color, $val in $colors {
+    &-#{$color} {
+      color: $val;
+    }
+  }
+}
+
+// background colours
+$bg-colors: (
+  'primary': $fe-clr-primary,
+  'secondary': $fe-clr-secondary,
+  'success': $fe-clr-success,
+  'danger': $fe-clr-danger,
+  'warning': $fe-clr-warning,
+  'info': $fe-clr-info,
+  'light': $fe-clr-light,
+  'dark': $fe-clr-dark,
+);
+
+
+.fe-bg {
+  @each $color, $val in $bg-colors {
+    &-#{$color} {
+      background-color: $val;
+    }
+  }
+}
+
+
+// list styles
+$list-styles: (
+  'bullet': disc,
+  'circle': circle,
+  'square': square,
+  'decimal': decimal,
+);
+
+.fe-list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+  @each $style, $val in $list-styles {
+    &-#{$style} {
+      list-style-type: $val;
+    }
+  }
+}
+

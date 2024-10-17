@@ -10,11 +10,13 @@ This is also a coursework project which will be submitted for grading in Level 4
 
 ### Resources
 **For collaborators**
+
 🔗[Build documentation](docs/build.md)
 
-**For users**
->[!NOTE]
-*To be updated*
+**For dev users**
 
-🔗User guide 
-# feather-css
+🔗[User guide](docs/dev-guide.md)
+
+**Link to our GitHub Page**
+
+🔗[FeatherCSS]() (to be updated)
