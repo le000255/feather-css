@@ -180,7 +180,7 @@ Here are some examples of using the utilities provided by this project:
   ```
 
 > [!Note]  
-> _For more details of how to use FeatherCSS, please visit our [GitHub page]() (to be updated)._
+> _For more details of how to use FeatherCSS, please visit our [GitHub page](https://le000255.github.io/feather-css/)._
 
 ### Customization
 
