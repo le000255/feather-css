@@ -46,25 +46,35 @@ The project repository is organized as follows:
 
 ```
 feather-css-repo/
-├── css/
-│   ├── style.css
-│   ├── style.min.css
+├── dist/
+│   ├── feather-css.css
+│   ├── feather-css.css.map
 ├── js/
-│   ├── script.js
-│   ├── script.min.js
-├── scss/
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   ├── _utilities.scss
+│   ├── data.js
+│   ├── main.js
+├── src/
+│   ├── buttons.scss
+│   ├── _forms.scss
 │   ├── _functions.scss
-│   ├── main.scss
+│   ├── _layout.scss
+│   ├── _lists.scss
+│   ├── _mixins.scss
+│   ├── _reset.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   ├── _utilities.scss
+│   ├── _variables.scss
+│   ├── feather-css.scss
 ├── docs/
-│   ├── userguide.md
+│   ├── build.md
+│   ├── dev-guide.md
+│   ├── workflow-terminal.md
+│   ├── workflow-ui.md
 │   ├── README.md
 ├── index.html
-├── package.json
-├── gulpfile.js
-└── README.md
+├── README.md
+└── style.css
+
 ```
 
 - **css/**: Contains the compiled CSS files. You will link to these files in your HTML.
@@ -90,11 +100,18 @@ your-repo/
 │   ├── script.js
 │   ├── script.min.js
 ├── scss/
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   ├── _utilities.scss
+│   ├── buttons.scss
+│   ├── _forms.scss
 │   ├── _functions.scss
-│   ├── main.scss
+│   ├── _layout.scss
+│   ├── _lists.scss
+│   ├── _mixins.scss
+│   ├── _reset.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   ├── _utilities.scss
+│   ├── _variables.scss
+│   ├── feather-css.scss
 ├── index.html
 ├── package.json (optional)
 ├── gulpfile.js (optional)
