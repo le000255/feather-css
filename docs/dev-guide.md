@@ -76,7 +76,8 @@ feather-css-repo/
 - **gulpfile.js**: Contains Gulp tasks for automating development workflows.
 - **README.md**: Provides an overview and instructions for the project.
 
-> [!NOTE] > _Some files and folders, such as `style.css`, `js/`, `README.md`, and `docs/`, are primarily for showcasing or guiding purposes and may not be necessary for your development._
+> [!NOTE] 
+_Some files and folders, such as `style.css`, `js/`, `README.md`, and `docs/`, are primarily for showcasing or guiding purposes and may not be necessary for your development._
 
 If you get rid of unnecessary files and folders, your project repo may look like:
 
